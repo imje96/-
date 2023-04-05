@@ -1,4 +1,4 @@
-package Library;
+package save;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,6 @@ public class ListMaker {
             mem.setAddress(l.get(2));
             mem.setPhoneNumber(l.get(3));
             mem.setBirthday(l.get(4));
-            mem.setJoinDate(l.get(5));
             memberlist.add(mem);
         }
         return memberlist;
@@ -37,7 +36,7 @@ public class ListMaker {
             b.setIsbn(l.get(0));
             b.setTitle(l.get(1));
             b.setAuthor(l.get(2));
-            b.setPublishDate(l.get(3));
+            b.setPublisherDate(l.get(3));
             b.setIsAvailable(Boolean.valueOf(l.get(4)));
             booklist.add(b);
         }
@@ -51,11 +50,11 @@ public class ListMaker {
         for (int i = 1; i < list.size(); i++) {
             List<String> l = list.get(i);
             Loan loan = new Loan();
-            loan.setId(l.get(0));
-            loan.setBookTitle(l.get(1));
+            loan.setBookTitle(l.get(0));
+            loan.setMemberName(l.get(1));
             loan.setLoanDate(l.get(2));
             loan.setDueDate(l.get(3));
-            loan.setIsRenewStatus(Boolean.valueOf(l.get(4)));
+            loan.setIsRenewable(Boolean.valueOf(l.get(4)));
             loanlist.add(loan);
         }
         return loanlist;

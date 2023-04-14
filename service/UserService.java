@@ -3,16 +3,17 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import data.Data;
 import domain.model.User;
 import domain.repository.UserRepository;
-import save.Data;
 
 public class UserService implements UserRepository {
     private Data<User> data;
     
     private List<User> users = new ArrayList<>();
     
-
+    public UserService() {
+    }
     
     public UserService(Data<User> data) {
         this.data = data;

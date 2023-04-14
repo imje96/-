@@ -1,50 +1,26 @@
 package domain.model;
 
 public class Loan {
-    private int id; // 대출한 회원
-    private String bookTitle; // 대출한 책
-    private String loanDate; // 대출 날짜
-    private String dueDate; // 반납 기한
-    private boolean isRenewStatus; // 연장 상태
+    private String borrowBook; // 도서대출 
+    private String dueDateExtend; // 대출연장
 
-    public int getId() {
-        return id;
+
+
+    public String getBorrowBook() {
+        return borrowBook;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBorrowBook(String borrowBook) {
+        this.borrowBook = borrowBook;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    public String getDueDateExtend() {
+        return dueDateExtend;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    public void setDueDateExtend(String dueDateExtend) {
+        this.dueDateExtend = dueDateExtend;
     }
 
-    public String getLoanDate() {
-        return loanDate;
-    }
-
-    public void setLoanDate(String loanDate) {
-        this.loanDate = loanDate;
-    }
-
-    public String getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
-    }
-
-    public boolean getIsRenewStatus() {
-        return isRenewStatus;
-    }
-
-    public void setIsRenewStatus(boolean isRenewStatus) {
-        this.isRenewStatus = isRenewStatus;
-    }
 
 }

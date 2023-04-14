@@ -3,9 +3,9 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import data.Data;
 import domain.model.Book;
 import domain.repository.BookRepository;
-import save.Data;
 
 
 public class BookService implements BookRepository {
@@ -13,7 +13,8 @@ public class BookService implements BookRepository {
     
     private List<Book> books = new ArrayList<>();
     
-    
+    public BookService() {
+    }
     public BookService(Data<Book> data) {
         this.data = data;
     }

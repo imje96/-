@@ -3,6 +3,7 @@ package save;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import data.Data;
 import domain.model.User;
 
 public class UserCsvFileData implements Data<User> {

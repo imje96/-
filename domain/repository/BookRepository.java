@@ -2,6 +2,7 @@ package domain.repository;
 
 import java.util.List;
 import domain.model.Book;
+import domain.model.User;
 
 public interface BookRepository {
 

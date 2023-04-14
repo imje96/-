@@ -4,16 +4,15 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Book {
-    private int id;
+    private int isbn;
     private String title;
     private String author;
     private String publisher;
     private Date publicationDate;
     private Date registrationDate;
 
-    public Book(int id, String title, String author, String publisher, Date publicationDate,
-            Date registrationDate) {
-        this.id = id;
+    public Book(int isbn, String title, String author, String publisher, Date publicationDate, Date registrationDate) {
+        this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -21,12 +20,13 @@ public class Book {
         this.registrationDate = registrationDate;
     }
 
-    public int getId() {
-        return id;
+
+    public int getIsbn() {
+        return isbn;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIsbn(int isnb) {
+        this.isbn = isbn;
     }
 
     public String getTitle() {
@@ -71,7 +71,7 @@ public class Book {
     
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(isbn);
     }
 
     @Override
@@ -83,12 +83,12 @@ public class Book {
         if (getClass() != obj.getClass())
             return false;
         Book other = (Book) obj;
-        return id == other.id;
+        return isbn == other.isbn;
     }
 
     @Override
     public String toString() {
-        return "Book [id=" + id + ", title=" + title + ", author=" + author + ", publisher="
+        return "Book [id=" + isbn + ", title=" + title + ", author=" + author + ", publisher="
                 + publisher + ", publicationDate=" + publicationDate + ", registrationDate="
                 + registrationDate + "]";
     }

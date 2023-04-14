@@ -2,30 +2,13 @@ package service;
 
 import java.util.ArrayList;
 import java.util.List;
+import data.Data;
 import domain.model.Book;
 import domain.model.Loan;
 import domain.model.User;
 import domain.repository.LoanRepository;
 import domain.repository.UserRepository;
-import save.Data;
 
-
-//    // 대출 이력 조회 메소드
-//    void searchLoan(String title);
-//    // 도서 대출 메소드 writeCSV
-//    void loanBook(Loan loan);
-//    // 도서 연장 메소드
-//    void loanExtention(Loan loan);
-//    // 도서 삭제 메소드
-//    void deleteBook(Loan loan);
-//    // 도서 반납 메소드
-//    void returBook(Loan loan);
-    
-//private String id; // 대출한 회원
-//private String bookTitle; // 대출한 책
-//private String loanDate; // 대출 날짜
-//private String dueDate; // 반납 기한
-//private boolean isRenewStatus; // 연장 상태    
 
 
 public class LoanService implements LoanRepository {
@@ -34,7 +17,6 @@ public class LoanService implements LoanRepository {
     private List<Loan> loans = new ArrayList<>();
     
     public LoanService() {
-        
     }
     
     public LoanService(Data<Loan> data) {
